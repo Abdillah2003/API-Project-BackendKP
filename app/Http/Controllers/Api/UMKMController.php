@@ -31,7 +31,7 @@ class UMKMController extends Controller
 
     public function indexByUser($id_user)
     {
-        $umkm = umkm::where($id_user, '>', 100)->get();
+        $umkm = umkm::where('id_user' ,$id_user)->get();
 
         if(!is_null($umkm)) {
             return response([
